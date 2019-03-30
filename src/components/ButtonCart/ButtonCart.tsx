@@ -4,33 +4,31 @@ import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 
-const styleButtonCart = {
-    fontSize: 12,
-    color: 'white',
-    background: '#f04a3c',
-    boxShadow: 'none',
-    borderRadius: 50,
-    //width: 50
-    margin: '30px'
+const styles = {
+    buttonCart: {
+        fontSize: 12,
+        color: 'white',
+        background: '#f04a3c',
+        boxShadow: 'none',
+        borderRadius: 50,
+        margin: '30px',
+        textTransform: 'capitalize',
+    },
+    shoppingCart: {
+        paddingRight: '10px'
+    }
 }
-
-const styleShoppingCart = {
-    paddingRight: '10px'
-}
-
 
 const ButtonCart: React.FC = () => {
     return (
             <Button
-                style={styleButtonCart}
+                style={styles.buttonCart}
                 size="large"
                 variant="raised">
-            <ShoppingCart style={styleShoppingCart} />
+            <ShoppingCart style={styles.shoppingCart} />
             Add to Cart
-            </Button>
-            
+            </Button>     
     )
-
 }
 
 ButtonCart.propTypes = {
