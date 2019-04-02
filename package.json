@@ -34,10 +34,10 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.3.4",
-    "@storybook/addon-actions": "^5.0.1",
-    "@storybook/addon-links": "^5.0.1",
-    "@storybook/addons": "^5.0.1",
-    "@storybook/react": "^5.0.1",
+    "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-links": "^5.0.6",
+    "@storybook/addons": "^5.0.6",
+    "@storybook/react": "^5.0.6",
     "babel-loader": "^8.0.5",
     "tslint": "^5.13.1"
   }
