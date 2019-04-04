@@ -1,1 +1,4 @@
-export { HomeTextSupersetView } from "./HomeTextSupersetView";
+export {
+  HomeTextSupersetView,
+  IHomeTextSupersetViewProps
+} from "./HomeTextSupersetView";
