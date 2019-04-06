@@ -1,18 +1,21 @@
 import * as React from "react";
-import { HomeTextSupersetView, IHomeTextSupersetViewProps } from "./index";
+import { HomeTextSupersetView } from "./";
+// import { IHomeTextSupersetViewProps } from "./";
+
 import { storiesOf } from "@storybook/react";
-
-
+import { ButtonCart } from "../";
 
 storiesOf("Text", module).add("Text Superset", () => {
-  const props: IHomeTextSupersetViewProps = {
+  const props /*: IHomeTextSupersetViewProps*/ = {
     textMain: 12,
-    textMainFontSize: '2.5em',
-    textMainFontFamily: 'Yanone Kaffeesatz',
+    textMainFontSize: "2.3em",
+    textMainFontFamily: "Yanone Kaffeesatz",
     textSuper: 95,
-    textSuperFontSize: '1.2em',
-    textSuperFontFamily: 'Yanone Kaffeesatz'
-  }
+    textSuperFontSize: "1.5em",
+    textSuperFontFamily: "Yanone Kaffeesatz"
+  };
 
-  return <HomeTextSupersetView {...props} /> 
-}
+  return <HomeTextSupersetView {...props} />;
+});
+
+storiesOf("Test", module).add("Cart", () => <ButtonCart />);
