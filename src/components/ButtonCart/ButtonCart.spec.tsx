@@ -1,4 +1,5 @@
 /*
+TODO: Write ButtonCart test
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ButtonCart from './';

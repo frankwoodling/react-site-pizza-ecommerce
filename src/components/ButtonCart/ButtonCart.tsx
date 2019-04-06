@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import ShoppingCartOutlined from "@material-ui/icons/ShoppingCartOutlined";
@@ -26,7 +25,7 @@ const ButtonCartBase = (props: any) => {
   const { classes } = props;
 
   return (
-    <Button className={classes.root} size="large" variant="raised">
+    <Button className={classes.root} size="large" variant="contained">
       <ShoppingCartOutlined className={classes.shoppingCart} />
       Add to Cart
     </Button>
