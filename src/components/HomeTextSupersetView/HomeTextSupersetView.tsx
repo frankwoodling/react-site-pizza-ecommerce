@@ -4,9 +4,11 @@ interface IHomeTextSupersetViewProps {
   textMain: string | number;
   textMainFontSize?: string; // ex: 15px or .8em
   textMainFontFamily?: string;
+  textMainColor?: string;
   textSuper: string | number;
   textSuperFontSize?: string;
   textSuperFontFamily?: string;
+  textSuperColor?: string;
 }
 
 const HomeTextSupersetView: React.FC<IHomeTextSupersetViewProps> = props => {
@@ -15,7 +17,8 @@ const HomeTextSupersetView: React.FC<IHomeTextSupersetViewProps> = props => {
       <span
         style={{
           fontSize: props.textMainFontSize,
-          fontFamily: props.textMainFontFamily
+          fontFamily: props.textMainFontFamily,
+          color: props.textMainColor
         }}
       >
         {props.textMain}
@@ -23,7 +26,8 @@ const HomeTextSupersetView: React.FC<IHomeTextSupersetViewProps> = props => {
       <sup
         style={{
           fontSize: props.textSuperFontSize,
-          fontFamily: props.textSuperFontFamily
+          fontFamily: props.textSuperFontFamily,
+          color: props.textSuperColor
         }}
       >
         {props.textSuper}
