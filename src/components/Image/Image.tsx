@@ -2,7 +2,8 @@ import * as React from "react";
 interface IImageProps {
   height?: number;
   width?: number;
-  fitImage?: "width" | "height" | "stretch";
+  backgroundColor?: string;
+  stretch?: boolean;
   image: string;
 }
 
@@ -12,14 +13,15 @@ const ImageView: React.FC<IImageProps> = props => {
       style={{
         width: props.width,
         height: props.height,
-        overflow: "hidden"
+        overflow: "hidden",
+        backgroundColor: props.backgroundColor
       }}
     >
       <img
         src={props.image}
         style={{
-          width: "100%" // props.width,
-          // height: "100%" //props.height,
+          height: props.stretch ? "100%" : undefined,
+          width: props.stretch ? "100%" : undefined
         }}
       />
     </div>
@@ -27,5 +29,3 @@ const ImageView: React.FC<IImageProps> = props => {
 };
 
 export { ImageView, IImageProps };
-
-// To keep aspect ratio keep only width or height in img element
