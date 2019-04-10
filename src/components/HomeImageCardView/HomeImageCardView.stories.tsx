@@ -1,7 +1,11 @@
 import * as React from "react";
-import { HomeImageCardView } from "./index";
+import { HomeImageCardView, IHomeImageCardViewProps } from "./index";
 import { storiesOf } from "@storybook/react";
 
 storiesOf("Card: Product", module).add("Image", () => {
-  return <HomeImageCardView />;
+  const props: IHomeImageCardViewProps = {
+    image: "https://via.placeholder.com/360x320/"
+  };
+
+  return <HomeImageCardView {...props} />;
 });

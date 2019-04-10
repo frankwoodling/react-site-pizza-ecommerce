@@ -1,21 +1,21 @@
 import * as React from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
+interface IHomeImageCardViewProps {
+  height?: number;
+  width?: number;
+  image: string;
+}
 
-interface IHomeImageCardViewProps {}
-
-// const HomeImageCardView: React.FC<IHomeImageCardViewProps> = props => {
-const HomeImageCardView: React.FC = () => {
+const HomeImageCardView: React.FC<IHomeImageCardViewProps> = props => {
   return (
-    <Card>
-      <CardContent>
-        <CardMedia
-          component="img"
-          image="https://via.placeholder.com/360x320/"
-        />
-      </CardContent>
-    </Card>
+    <div
+      style={{
+        width: props.width,
+        height: props.height,
+        overflow: "hidden"
+      }}
+    >
+      <img src={props.image} />
+    </div>
   );
 };
 
