@@ -1,11 +1,13 @@
 import * as React from "react";
-import { HomeImageCardView, IHomeImageCardViewProps } from "./index";
+import { ImageView, IImageProps } from "./index";
 import { storiesOf } from "@storybook/react";
 
 storiesOf("Card: Product", module).add("Image", () => {
-  const props: IHomeImageCardViewProps = {
+  const props: IImageProps = {
+    height: 720,
+    width: 640,
     image: "https://via.placeholder.com/360x320/"
   };
 
-  return <HomeImageCardView {...props} />;
+  return <ImageView {...props} />;
 });
