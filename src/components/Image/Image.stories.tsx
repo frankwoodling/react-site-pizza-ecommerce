@@ -7,7 +7,7 @@ storiesOf("Image", module).add("Image", () => {
     height: 320,
     width: 360,
     backgroundColor: "black",
-    image: "https://via.placeholder.com/360x320/",
+    image: "images/image_component_story.png",
     stretch: false
   };
 
