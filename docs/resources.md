@@ -12,3 +12,4 @@ Project directory structure:
 Github Issues Labels styleguide:
 
 - https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/
+- https://github.com/Snugug/reparo/wiki/Label-Style-Guide
