@@ -1,22 +1,24 @@
 import React from "react";
 import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import Fab from "@material-ui/core/Fab";
 
 const styles = (theme: Theme) =>
   createStyles({
     root: {
-      width: 200,
-      height: 45,
       fontSize: 14,
       color: "white",
       background: "#f04a3c",
-      boxShadow: "none",
-      borderRadius: 50,
-      margin: "30px",
-      textTransform: "none"
+      borderRadius: "50%",
+      textTransform: "none",
+      display: "inline-block",
+      lineHeight: "14px"
     },
-    shoppingCart: {
-      paddingRight: "15px"
+    text: {
+      padding: "0px",
+      margin: "0px",
+      whiteSpace: "normal",
+      display: "inline-block",
+      lineHeight: "0px"
     }
   });
 
@@ -24,9 +26,11 @@ const HomeButtonSizeSelectBase = (props: any) => {
   const { classes } = props;
 
   return (
-    <Button className={classes.root} size="large" variant="contained">
-      test
-    </Button>
+    <Fab className={classes.root} size="medium" color="secondary">
+      <span className={classes.text}>22</span>
+      <br />
+      <span className={classes.text}>cm</span>
+    </Fab>
   );
 };
 
