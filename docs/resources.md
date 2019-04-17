@@ -8,3 +8,7 @@ React component naming convention:
 Project directory structure:
 
 - https://hackernoon.com/tips-on-react-for-large-scale-projects-3f9ece85983d
+
+Github Issues Labels styleguide:
+
+- https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/
