@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "isolatedModules": false,
+    "isolatedModules": true,
     "target": "es5",
     "lib": ["dom", "es2015", "es2016", "es2017", "esnext"],
     "allowJs": true,
@@ -18,5 +18,5 @@
     "typeRoots": ["node_modules/@types"]
   },
   "exclude": ["node_modules", "webpack.config.ts", ".storybook/config.ts"],
-  "include": ["src"]
+  "include": ["src/*"]
 }

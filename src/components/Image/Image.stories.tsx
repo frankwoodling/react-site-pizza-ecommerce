@@ -7,9 +7,10 @@ storiesOf("Image", module).add("Image", () => {
     height: 320,
     width: 360,
     backgroundColor: "black",
-    image: "images/image_component_story.png",
+    // image: require("./image_component_story.png"),
+    image: require("../../assets/images/image_component_story.png"),
     stretch: false
   };
-
   return <ImageView {...props} />;
 });
+// src/assets/images/image_component_story.png

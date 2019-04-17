@@ -21,7 +21,7 @@ const styles = (theme: Theme) =>
     }
   });
 
-const ButtonCartBase = (props: any) => {
+const HomeButtonAddCartBase = (props: any) => {
   const { classes } = props;
 
   return (
@@ -32,6 +32,6 @@ const ButtonCartBase = (props: any) => {
   );
 };
 
-const ButtonCart = withStyles(styles)(ButtonCartBase);
+const HomeButtonAddCart = withStyles(styles)(HomeButtonAddCartBase);
 
-export { ButtonCart };
+export { HomeButtonAddCart };

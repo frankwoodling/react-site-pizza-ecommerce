@@ -2,6 +2,6 @@
 // also need an interface that supports multiple sizes
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { ButtonCart } from "./index";
+import { HomeButtonAddCart } from "./index";
 
-storiesOf("Button", module).add("Cart", () => <ButtonCart />);
+storiesOf("Button", module).add("Add to Cart", () => <HomeButtonAddCart />);
