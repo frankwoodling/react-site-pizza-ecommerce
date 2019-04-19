@@ -3,10 +3,13 @@ import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
 
 interface IHomeButtonSizeSelectProps {
+  backgroundColor: string;
   textTop: string | number;
+  textTopColor: string;
   textTopFontSize?: string; // ex: 15px or .8em
   textTopFontFamily?: string;
   textBottom: string | number;
+  textBottomColor: string;
   textBottomFontSize?: string; // ex: 15px or .8em
   textBottomFontFamily?: string;
 }
@@ -14,14 +17,13 @@ interface IHomeButtonSizeSelectProps {
 const styles = (theme: Theme) =>
   createStyles({
     root: {
-      color: "white",
-      background: "#f04a3c",
+      color: "black",
+      backgroundColor: "transparent", //"#FFCD00",
       borderRadius: "50%",
       textTransform: "none",
       display: "inline-block",
       lineHeight: "14px"
     },
-    text: {},
     textTop: {
       fontSize: 14,
       fontWeight: "bold",
@@ -38,7 +40,7 @@ const HomeButtonSizeSelectBase = (props: any) => {
   const { classes } = props;
 
   return (
-    <Fab className={classes.root} size="medium" color="secondary">
+    <Fab className={classes.root} size="medium">
       <span className={classes.textTop}>22</span>
       <br />
       <span className={classes.textBottom}>cm</span>
@@ -48,4 +50,4 @@ const HomeButtonSizeSelectBase = (props: any) => {
 
 const HomeButtonSizeSelect = withStyles(styles)(HomeButtonSizeSelectBase);
 
-export { HomeButtonSizeSelect };
+export { HomeButtonSizeSelect, IHomeButtonSizeSelectProps };
