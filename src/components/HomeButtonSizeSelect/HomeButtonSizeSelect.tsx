@@ -1,6 +1,12 @@
 import React from "react";
-import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+
+enum FontWeight {
+  NORMAL = "normal",
+  BOLD = "bold",
+  BOLDER = "bolder",
+  LIGHTER = "lighter"
+}
 
 interface IHomeButtonSizeSelectProps {
   buttonSize: string; // Sets height, width, min height, min width to ensure a circle is created
@@ -10,42 +16,15 @@ interface IHomeButtonSizeSelectProps {
   textTopColor: string;
   textTopFontSize?: string; // ex: 15px or .8em
   textTopFontFamily?: string;
+  textTopFontWeight?: FontWeight;
   textBottom: string | number;
   textBottomColor: string;
   textBottomFontSize?: string;
   textBottomFontFamily?: string;
+  textBottomFontWeight: FontWeight;
 }
 
-const styles = (theme: Theme) =>
-  createStyles({
-    root: {
-      backgroundColor: "blue", //"#FFCD00",
-      borderRadius: "50%",
-      textTransform: "none",
-      display: "inline-block",
-      lineHeight: "14px",
-      height: "50px",
-      width: "50px",
-      minHeight: "50px",
-      minWidth: "50px"
-    },
-    textTop: {
-      color: "black",
-      fontSize: 14,
-      fontWeight: "bold",
-      whiteSpace: "normal",
-      lineHeight: "0px"
-    },
-    textBottom: {
-      color: "black",
-      fontSize: 14,
-      fontWeight: "lighter"
-    }
-  });
-
-const HomeButtonSizeSelectBase: React.FC<
-  IHomeButtonSizeSelectProps
-> = props => {
+const HomeButtonSizeSelect: React.FC<IHomeButtonSizeSelectProps> = props => {
   return (
     <Button
       style={{
@@ -60,13 +39,27 @@ const HomeButtonSizeSelectBase: React.FC<
         minWidth: props.buttonSize
       }}
     >
-      <span>22</span>
+      <span
+        style={{
+          color: props.textTopColor,
+          fontSize: props.textTopFontSize,
+          fontWeight: props.textTopFontWeight
+        }}
+      >
+        {props.textTop}
+      </span>
       <br />
-      <span>cm</span>
+      <span
+        style={{
+          color: props.textBottomColor,
+          fontSize: props.textBottomFontSize,
+          fontWeight: props.textBottomFontWeight
+        }}
+      >
+        {props.textBottom}
+      </span>
     </Button>
   );
 };
 
-const HomeButtonSizeSelect = withStyles(styles)(HomeButtonSizeSelectBase);
-
-export { HomeButtonSizeSelect, IHomeButtonSizeSelectProps };
+export { HomeButtonSizeSelect, IHomeButtonSizeSelectProps, FontWeight };
