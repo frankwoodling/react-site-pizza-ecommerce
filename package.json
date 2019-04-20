@@ -15,6 +15,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",
+    "storybook": "^1.0.0",
     "typescript": "^3.3.3333"
   },
   "scripts": {
@@ -36,10 +37,10 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.4.3",
-    "@storybook/addon-actions": "^5.0.6",
-    "@storybook/addon-links": "^5.0.6",
-    "@storybook/addons": "^5.0.6",
-    "@storybook/react": "^5.0.6",
+    "@storybook/addon-actions": "^5.0.10",
+    "@storybook/addon-links": "^5.0.10",
+    "@storybook/addons": "^5.0.10",
+    "@storybook/react": "^5.0.10",
     "@types/storybook-addon-jsx": "5.4.3",
     "@types/storybook__react": "^4.0.1",
     "awesome-typescript-loader": "^5.2.1",
