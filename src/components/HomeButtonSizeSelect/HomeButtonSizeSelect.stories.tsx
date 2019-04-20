@@ -6,7 +6,9 @@ import { HomeButtonSizeSelect, IHomeButtonSizeSelectProps } from "./index";
 
 storiesOf("Button", module).add("Size Select", () => {
   const props: IHomeButtonSizeSelectProps = {
+    buttonSize: "50px",
     backgroundColor: "#FFCD00",
+    lineHeight: "14px",
     textTop: 22,
     textTopColor: "black",
     textTopFontSize: "14px", // ex: 15px or .8em
