@@ -18,15 +18,7 @@ storiesOf("Button", module).add("Size Select", () => {
     backgroundColor: "#FFCD00",
     lineHeight: "14px",
     textTop: 22,
-    textTopColor: "black",
-    textTopFontSize: "14px", // ex: 15px or .8em
-    textTopFontFamily: "Yanone Kaffeesatz",
-    textTopFontWeight: FontWeight.BOLDER,
     textBottom: "cm",
-    textBottomColor: "black",
-    textBottomFontSize: "14px", // ex: 15px or .8em
-    textBottomFontFamily: "Yanone Kaffeesatz",
-    textBottomFontWeight: FontWeight.NORMAL,
     onClick: testFunc
   };
 

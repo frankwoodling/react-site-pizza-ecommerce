@@ -13,15 +13,15 @@ interface IHomeButtonSizeSelectProps {
   backgroundColor: string;
   lineHeight: string; // Should be roughly the same as the font size
   textTop: string | number;
-  textTopColor: string;
+  textTopColor?: string;
   textTopFontSize?: string; // ex: 15px or .8em
   textTopFontFamily?: string;
   textTopFontWeight?: FontWeight;
   textBottom: string | number;
-  textBottomColor: string;
+  textBottomColor?: string;
   textBottomFontSize?: string;
   textBottomFontFamily?: string;
-  textBottomFontWeight: FontWeight;
+  textBottomFontWeight?: FontWeight;
   onClick?: () => void;
 }
 
@@ -62,6 +62,17 @@ const HomeButtonSizeSelect: React.FC<IHomeButtonSizeSelectProps> = props => {
       </span>
     </Button>
   );
+};
+
+HomeButtonSizeSelect.defaultProps = {
+  textTopColor: "black",
+  textTopFontSize: "14px",
+  textTopFontFamily: "Yanone Kaffeesatz",
+  textTopFontWeight: FontWeight.BOLDER,
+  textBottomColor: "black",
+  textBottomFontSize: "14px",
+  textBottomFontFamily: "Yanone Kaffeesatz",
+  textBottomFontWeight: FontWeight.NORMAL
 };
 
 export { HomeButtonSizeSelect, IHomeButtonSizeSelectProps, FontWeight };
