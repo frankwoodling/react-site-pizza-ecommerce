@@ -22,6 +22,7 @@ interface IHomeButtonSizeSelectProps {
   textBottomFontSize?: string;
   textBottomFontFamily?: string;
   textBottomFontWeight: FontWeight;
+  onClick?: () => void;
 }
 
 const HomeButtonSizeSelect: React.FC<IHomeButtonSizeSelectProps> = props => {
@@ -38,6 +39,7 @@ const HomeButtonSizeSelect: React.FC<IHomeButtonSizeSelectProps> = props => {
         minHeight: props.buttonSize,
         minWidth: props.buttonSize
       }}
+      onClick={props.onClick}
     >
       <span
         style={{

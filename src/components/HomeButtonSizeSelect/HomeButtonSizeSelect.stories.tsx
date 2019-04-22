@@ -8,6 +8,10 @@ import {
   FontWeight
 } from "./index";
 
+const testFunc = () => {
+  console.log("onClick fired");
+};
+
 storiesOf("Button", module).add("Size Select", () => {
   const props: IHomeButtonSizeSelectProps = {
     buttonSize: "50px",
@@ -22,7 +26,8 @@ storiesOf("Button", module).add("Size Select", () => {
     textBottomColor: "black",
     textBottomFontSize: "14px", // ex: 15px or .8em
     textBottomFontFamily: "Yanone Kaffeesatz",
-    textBottomFontWeight: FontWeight.NORMAL
+    textBottomFontWeight: FontWeight.NORMAL,
+    onClick: testFunc
   };
 
   return <HomeButtonSizeSelect {...props} />;
