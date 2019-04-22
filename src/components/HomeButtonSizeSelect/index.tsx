@@ -1,1 +1,1 @@
-export * from "./HomeButtonSizeSelect";
+export { HomeButtonSizeSelect } from "./HomeButtonSizeSelect";

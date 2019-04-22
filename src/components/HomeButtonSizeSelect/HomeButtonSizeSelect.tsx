@@ -63,7 +63,7 @@ const HomeButtonSizeSelect: React.FC<IHomeButtonSizeSelectProps> = props => {
     </Button>
   );
 };
-
+/*
 HomeButtonSizeSelect.defaultProps = {
   textTopColor: "black",
   textTopFontSize: "14px",
@@ -74,5 +74,5 @@ HomeButtonSizeSelect.defaultProps = {
   textBottomFontFamily: "Yanone Kaffeesatz",
   textBottomFontWeight: FontWeight.NORMAL
 };
-
-export { HomeButtonSizeSelect, IHomeButtonSizeSelectProps, FontWeight };
+*/
+export { HomeButtonSizeSelect };
