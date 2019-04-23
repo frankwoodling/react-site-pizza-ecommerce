@@ -1,12 +1,12 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { HomeButtonSizeSelect, IHomeButtonSizeSelectProps } from "./index";
+import { HomeButtonSizeSelect, IHomeButtonSizeSelectProps } from "./";
 
 const testFunc = () => {
   console.log("onClick fired");
 };
 
-storiesOf("Button", module).add("Size Select: Selected", () => {
+storiesOf("Button", module).add("Size Select, Selected", () => {
   const props: IHomeButtonSizeSelectProps = {
     buttonSize: "50px",
     backgroundColor: "#FFCD00",

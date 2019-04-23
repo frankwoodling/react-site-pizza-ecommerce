@@ -8,7 +8,7 @@ enum FontWeight {
   LIGHTER = "lighter"
 }
 
-interface IHomeButtonSizeSelectProps {
+export interface IHomeButtonSizeSelectProps {
   buttonSize: string; // Sets height, width, min height, min width to ensure a circle is created
   backgroundColor: string;
   lineHeight: string; // Should be roughly the same as the font size
@@ -25,7 +25,9 @@ interface IHomeButtonSizeSelectProps {
   onClick?: () => void;
 }
 
-const HomeButtonSizeSelect: React.FC<IHomeButtonSizeSelectProps> = props => {
+export const HomeButtonSizeSelect: React.FC<
+  IHomeButtonSizeSelectProps
+> = props => {
   return (
     <Button
       style={{
@@ -63,16 +65,3 @@ const HomeButtonSizeSelect: React.FC<IHomeButtonSizeSelectProps> = props => {
     </Button>
   );
 };
-/*
-HomeButtonSizeSelect.defaultProps = {
-  textTopColor: "black",
-  textTopFontSize: "14px",
-  textTopFontFamily: "Yanone Kaffeesatz",
-  textTopFontWeight: FontWeight.BOLDER,
-  textBottomColor: "black",
-  textBottomFontSize: "14px",
-  textBottomFontFamily: "Yanone Kaffeesatz",
-  textBottomFontWeight: FontWeight.NORMAL
-};
-*/
-export { HomeButtonSizeSelect };
